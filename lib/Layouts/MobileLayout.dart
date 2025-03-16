@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fyppakam/Controller/RadioButton.dart';
+import 'package:fyppakam/Pages/Mobile/MobileLogin.dart';
+import 'package:fyppakam/Pages/Mobile/MobileSignupPage.dart';
+import 'package:fyppakam/components/pakamText.dart';
 import 'package:get/get.dart';
 
 class Mobilelayout extends StatelessWidget {
@@ -34,30 +37,7 @@ class Mobilelayout extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "PAK",
-                          style: TextStyle(
-                            color: Colors.green,
-                            fontSize: 50,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: 20,
-                          ),
-                        ),
-                        TextSpan(
-                          text: "AM",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 50,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: 20,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  pakAmText(fontSize: 50, letterspacing:20 ),
                   SizedBox(height: 20),
 
                   // Buttons
@@ -67,7 +47,9 @@ class Mobilelayout extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context,MaterialPageRoute(builder: (context) => MobileLoginPage(onPressed: (){},),));
+                          },
                           child: Text("Login"),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green,
@@ -76,7 +58,9 @@ class Mobilelayout extends StatelessWidget {
                           ),
                         ),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(Mobilesignuppage(onPressed: (){},));
+                          },
                           child: Text("SignUp"),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green,

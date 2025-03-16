@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../Controller/RadioButton.dart';
+import '../components/pakamText.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
@@ -31,30 +32,7 @@ class DesktopLayout extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "PAK",
-                          style: TextStyle(
-                            color: Colors.green,
-                            fontSize: 50,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: 15,
-                          ),
-                        ),
-                        TextSpan(
-                          text: "AM",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 50,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: 15,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  pakAmText(fontSize: 50, letterspacing:20 ),
                   SizedBox(height: 20),
         
                   // Buttons
