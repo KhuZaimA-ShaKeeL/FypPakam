@@ -8,8 +8,8 @@ import 'package:fyppakam/components/pakamText.dart';
 import '../../components/CustomTextField.dart';
 
 class MobileLoginPage extends StatelessWidget {
-  void Function()? onPressed;
-  MobileLoginPage({super.key,required this.onPressed});
+
+  MobileLoginPage({super.key});
 
   //var _formkey = GlobalKey<FormState>();
 
@@ -54,7 +54,7 @@ class MobileLoginPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Mobilesignuppage(onPressed: onPressed,)),
+                              builder: (context) => Mobilesignuppage()),
                         );
                       },
                       child: Text(

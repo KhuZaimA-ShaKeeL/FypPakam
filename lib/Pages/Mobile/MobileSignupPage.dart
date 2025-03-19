@@ -7,8 +7,7 @@ import '../../components/CustomButtonWithImage.dart';
 import '../../components/CustomTextField.dart';
 import '../../components/PasswordField.dart';
 class Mobilesignuppage extends StatelessWidget {
-  void Function()? onPressed;
-  Mobilesignuppage({super.key,required this.onPressed});
+  Mobilesignuppage({super.key});
 
   TextEditingController etEmail = TextEditingController();
   TextEditingController etPassword = TextEditingController();
@@ -51,7 +50,7 @@ class Mobilesignuppage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => MobileLoginPage(onPressed: onPressed,)),
+                              builder: (context) => MobileLoginPage()),
                         );
                       },
                       child: Text(

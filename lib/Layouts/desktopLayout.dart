@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fyppakam/Pages/Desktop/DesktopSignupPage.dart';
 import 'package:get/get.dart';
 import '../Controller/RadioButton.dart';
+import '../Pages/Desktop/DsktopLogin.dart';
 import '../components/pakamText.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -12,12 +14,13 @@ class DesktopLayout extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
+      body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // First section (Logo) takes 2/3 of the screen
-            Expanded(
-              flex: 2, // Takes 2/3 of the screen
+            // First section (Logo)
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.6, // 2/3 of the screen
               child: Center(
                 child: Image.asset(
                   'assets/logo.png',
@@ -25,61 +28,65 @@ class DesktopLayout extends StatelessWidget {
                 ),
               ),
             ),
-        
-            // Second section (Text, Buttons, Checkbox) takes 1/3 of the screen
-            Expanded(
-              flex: 1, // Takes 1/3 of the screen
+
+            // Second section (Text, Buttons, Checkbox)
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.3, // 1/3 of the screen
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  pakAmText(fontSize: 50, letterspacing:20 ),
-                  SizedBox(height: 20),
-        
+                  pakAmText(fontSize: 50, letterspacing: 20.0),
+                  const SizedBox(height: 20),
+
                   // Buttons
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         ElevatedButton(
-                          onPressed: () {},
-                          child: Text("Login"),
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => DesktopLoginPage(),));
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green,
                             foregroundColor: Colors.black,
-                            minimumSize: Size(120, 40),
+                            minimumSize: const Size(120, 40),
                           ),
+                          child: const Text("Login"),
                         ),
-                        SizedBox(width: 50),
+                        const SizedBox(width: 50),
                         ElevatedButton(
-                          onPressed: () {},
-                          child: Text("SignUp"),
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => DesktopSignUpPage(),));
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green,
                             foregroundColor: Colors.black,
-                            minimumSize: Size(120, 40),
+                            minimumSize: const Size(120, 40),
                           ),
+                          child: const Text("SignUp"),
                         ),
                       ],
                     ),
                   ),
-                  SizedBox(height: 20),
-        
+                  const SizedBox(height: 20),
+
                   // Checkbox
                   Obx(
                         () => Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 50),
+                      padding: const EdgeInsets.symmetric(horizontal: 50),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Checkbox(
                             value: controller.isChecked.value,
                             onChanged: (value) {
-                              controller.setButton(value);
+                              controller.setButton(value ?? false);
                             },
                           ),
-                          SizedBox(width: 20),
-                          Text("Agreement"),
+                          const SizedBox(width: 20),
+                          const Text("Agreement"),
                         ],
                       ),
                     ),

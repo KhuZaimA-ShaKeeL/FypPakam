@@ -48,7 +48,7 @@ class Mobilelayout extends StatelessWidget {
                       children: [
                         ElevatedButton(
                           onPressed: () {
-                            Navigator.push(context,MaterialPageRoute(builder: (context) => MobileLoginPage(onPressed: (){},),));
+                            Navigator.push(context,MaterialPageRoute(builder: (context) => MobileLoginPage(),));
                           },
                           child: Text("Login"),
                           style: ElevatedButton.styleFrom(
@@ -59,7 +59,7 @@ class Mobilelayout extends StatelessWidget {
                         ),
                         ElevatedButton(
                           onPressed: () {
-                            Get.to(Mobilesignuppage(onPressed: (){},));
+                            Get.to(Mobilesignuppage());
                           },
                           child: Text("SignUp"),
                           style: ElevatedButton.styleFrom(
