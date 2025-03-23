@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:fyppakam/Pages/Mobile/MobileHome.dart';
 import 'package:fyppakam/Pages/Mobile/MobileSignupPage.dart';
 import 'package:fyppakam/components/CustomButton.dart';
 import 'package:fyppakam/components/CustomButtonWithImage.dart';
 import 'package:fyppakam/components/PasswordField.dart';
 import 'package:fyppakam/components/pakamText.dart';
+import 'package:get/get.dart';
 
 import '../../components/CustomTextField.dart';
 
@@ -126,6 +128,8 @@ class MobileLoginPage extends StatelessWidget {
                   height: 10,
                 ),
                 Custombutton(label: "Login",radius: 20, onPressed:(){
+
+                  Get.offAll(Mobilehome());
 
                 })
               ],
