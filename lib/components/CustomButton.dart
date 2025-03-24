@@ -7,12 +7,13 @@ class Custombutton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width*0.9,
-      child: ElevatedButton(onPressed: onPressed, child: Text(label),style: ElevatedButton.styleFrom(
+    return Container(
+
+      width: MediaQuery.of(context).size.width*0.7,
+      child: ElevatedButton(onPressed: onPressed, child: Text(label,style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),style: ElevatedButton.styleFrom(
           backgroundColor: Colors.green,
           foregroundColor: Colors.black,
-        shape:RoundedRectangleBorder(side:BorderSide(width: 1),borderRadius: BorderRadius.circular(radius) ),
+        shape:RoundedRectangleBorder(side:BorderSide(width: 0),borderRadius: BorderRadius.circular(radius) ),
       ),),
     );
   }

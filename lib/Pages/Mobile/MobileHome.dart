@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fyppakam/components/CustomDrawerMobile.dart'; // Ensure this import is correct
+import 'package:fyppakam/components/customContainer.dart';
+import 'package:fyppakam/components/mobileAppBarWidget.dart';
+import 'package:fyppakam/components/mobileAppbarIntroWidget.dart';
 import 'package:fyppakam/components/pakamText.dart';
 import 'package:get/get.dart';
 
@@ -10,10 +13,10 @@ class Mobilehome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Create a GlobalKey for the Scaffold
-    final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+    final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
     return Scaffold(
-      key: _scaffoldKey, // Assign the key to the Scaffold
+      key: scaffoldKey, // Assign the key to the Scaffold
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
@@ -22,96 +25,24 @@ class Mobilehome extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Custom AppBar in the body
-              Container(
-                margin: EdgeInsets.only(top: 50),
-                //           padding: EdgeInsets.symmetric(horizontal: 16,),
-                decoration: BoxDecoration(
-                  color: Colors.white, // Background color
-                  borderRadius: BorderRadius.circular(10 // Rounded bottom corners
-                      ),
-                  border: Border.all(
-                    color: Colors.grey, // Border color
-                    width: 1, // Border width
-                  ),
-                ),
-                child: Container(
-                  //  margin: Ed,
-                  child: Row(
-                    children: [
-                      IconButton(
-                        onPressed: () {
-                          Get.offAll(() => Mobilehome());
-                        },
-                        icon: Icon(Icons.home), // Home icon
-                      ),
-                      Expanded(
-                        child: Center(
-                          child:
-                              pakAmText(fontSize: 20, letterspacing: 5), // Title
-                        ),
-                      ),
-                      CircleAvatar(
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                              CupertinoIcons.person_alt_circle), // Profile icon
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              Mobileappbarwidget(),
               // Second row
               SizedBox(
                 height: 5,
               ),
-              Container(
-                //color: Colors.blue,
-
-                child: Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        // Open the drawer using the GlobalKey
-                        _scaffoldKey.currentState?.openDrawer();
-                      },
-                      icon: Icon(Icons.menu, size: 25), // Larger menu icon
-                    ),
-                    SizedBox(width: 5), // Add spacing between icon and text
-                    Expanded(
-                      child: Container(
-                        padding: EdgeInsets.symmetric(vertical: 8),
-                        decoration: BoxDecoration(
-                          color: Colors.grey[200], // Light grey background
-                          borderRadius:
-                              BorderRadius.circular(10), // Rounded corners
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Hi, PakAM User",
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+             Mobileappbarintrowidget(scaffoldKey: scaffoldKey),
               SizedBox(height: 5),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   spacing: 5,
                   children: [
-                    Image.asset("assets/images/CL.png"),
-                    Image.asset("assets/images/TG.png"),
-                    Image.asset("assets/images/WG.png"),
-                    Image.asset("assets/images/BL.png"),
-                    Image.asset("assets/images/AL.png"),
+
+                    customContainer(color: Color(0xFFEEF0AE), text: "Total links Converted", count: "49",imagePath: "assets/images/linkIcon.png",),
+                    customContainer(color: Color(0xFFB7D3DF), text: "Total Telegrams channels", count: "10", imagePath: "assets/images/telegramIcon.png"),
+                    customContainer(color: Color(0xFFB1EEBC), text: "Total WhatsApp groups", count: "5", imagePath: "assets/images/whatsappIcon.png"),
+                    customContainer(color: Color(0xFFE3BDA5), text: "Total Bitly", count: "5", imagePath: "assets/images/bitlyIcon.png"),
+                    customContainer(color: Color(0xFFB7D3DF), text: "Total Links auto-shared", count: "5", imagePath: "assets/images/autoSharedIcon.png"),
                   ],
                 ),
               ),

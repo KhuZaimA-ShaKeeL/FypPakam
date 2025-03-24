@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fyppakam/Pages/Mobile/MobileHome.dart';
+import 'package:fyppakam/Pages/Mobile/MobileLinkChecker.dart';
+import 'package:fyppakam/Pages/Mobile/MobileLinkConverter.dart';
+import 'package:fyppakam/Pages/Mobile/MobileShortner.dart';
+import 'package:fyppakam/Pages/Mobile/MobileTextReplace.dart';
 import 'package:get/get.dart';
 
 class customDrawerMobile extends StatelessWidget {
@@ -51,6 +55,8 @@ class customDrawerMobile extends StatelessWidget {
           ),
           onTap: () {
             // Handle Link Converter
+
+            Get.to(MobileLinkConverter());
             print("Link Converter tapped");
           },
         ),
@@ -84,6 +90,8 @@ class customDrawerMobile extends StatelessWidget {
           ),
           onTap: () {
             // Handle Shortner
+
+            Get.to(MobileShortner());
             print("Shortner tapped");
           },
         ),
@@ -95,6 +103,8 @@ class customDrawerMobile extends StatelessWidget {
           ),
           onTap: () {
             // Handle Text Replacer
+
+            Get.to(Mobiletextreplace());
             print("Text Replacer tapped");
           },
         ),
@@ -105,7 +115,7 @@ class customDrawerMobile extends StatelessWidget {
             style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
           ),
           onTap: () {
-            // Handle Link Checker
+            Get.to(Mobilelinkchecker());
             print("Link Checker tapped");
           },
         ),
