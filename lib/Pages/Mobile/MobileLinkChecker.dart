@@ -10,16 +10,16 @@ import 'package:get/get_core/src/get_main.dart';
 import 'MobileHome.dart';
 
 class Mobilelinkchecker extends StatelessWidget {
-  const Mobilelinkchecker({super.key});
+   Mobilelinkchecker({super.key});
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
-    final linkController=TextEditingController();
+   final linkController=TextEditingController();
     final statusController=TextEditingController();
     return Scaffold(
       key: scaffoldKey,
-      //resizeToAvoidBottomInset: true, // Ensures the screen resizes when the keyboard appears
+        //resizeToAvoidBottomInset: t,
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(left: 8, right: 8),
@@ -62,7 +62,7 @@ class Mobilelinkchecker extends StatelessWidget {
                     minLines:3,
                     maxLines: 10,
                     keyboardType: TextInputType.multiline,
-                    textInputAction: TextInputAction.newline,
+                   // textInputAction: TextInputAction.newline,
                     controller: linkController,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(

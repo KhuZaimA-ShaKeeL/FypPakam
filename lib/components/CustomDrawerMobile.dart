@@ -5,6 +5,7 @@ import 'package:fyppakam/Pages/Mobile/MobileLinkChecker.dart';
 import 'package:fyppakam/Pages/Mobile/MobileLinkConverter.dart';
 import 'package:fyppakam/Pages/Mobile/MobileShortner.dart';
 import 'package:fyppakam/Pages/Mobile/MobileTextReplace.dart';
+import 'package:fyppakam/Pages/Mobile/socialMobile.dart';
 import 'package:get/get.dart';
 
 class customDrawerMobile extends StatelessWidget {
@@ -80,6 +81,7 @@ class customDrawerMobile extends StatelessWidget {
           ),
           onTap: () {
             // Handle Social
+            Get.to(socialMobile());
             print("Social tapped");
           },
         ),

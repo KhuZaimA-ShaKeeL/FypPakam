@@ -6,12 +6,12 @@ import '../../components/customContainer.dart';
 import '../../components/mobileAppBarWidget.dart';
 import '../../components/mobileAppbarIntroWidget.dart';
 class Mobiletextreplace extends StatelessWidget {
-  const Mobiletextreplace({super.key});
+   Mobiletextreplace({super.key});
+   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
-  @override
+   @override
   Widget build(BuildContext context) {
 
-    final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
     final productinfoController=TextEditingController();
     final copounController=TextEditingController();
     return Scaffold(

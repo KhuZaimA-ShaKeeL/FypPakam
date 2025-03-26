@@ -6,13 +6,13 @@ import '../../components/customContainer.dart';
 import '../../components/mobileAppBarWidget.dart';
 import '../../components/mobileAppbarIntroWidget.dart';
 class MobileShortner extends StatelessWidget {
-  const MobileShortner({super.key});
+   MobileShortner({super.key});
+   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
-  @override
+   @override
   Widget build(BuildContext context) {
 
-    final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
-    final CoupaonCodeController=TextEditingController();
+     final CoupaonCodeController=TextEditingController();
     return Scaffold(
       key: scaffoldKey,
       //resizeToAvoidBottomInset: true, // Ensures the screen resizes when the keyboard appears

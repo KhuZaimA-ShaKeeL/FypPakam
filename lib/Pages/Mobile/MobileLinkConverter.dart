@@ -6,12 +6,12 @@ import '../../components/customContainer.dart';
 import '../../components/mobileAppBarWidget.dart';
 import '../../components/mobileAppbarIntroWidget.dart';
 class MobileLinkConverter extends StatelessWidget {
-  const MobileLinkConverter({super.key});
+   MobileLinkConverter({super.key});
+   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
-  @override
+   @override
   Widget build(BuildContext context) {
 
-    final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
     final linkController=TextEditingController();
     return Scaffold(
       key: scaffoldKey,
