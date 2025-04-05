@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fyppakam/Layouts/MobileLayout.dart';
 import 'package:fyppakam/Pages/Mobile/ContactUsMobile.dart';
 import 'package:fyppakam/Pages/Mobile/ConvertBotsMobile.dart';
 import 'package:fyppakam/Pages/Mobile/HelpMobile.dart';
@@ -184,6 +185,7 @@ class customDrawerMobile extends StatelessWidget {
           ),
           onTap: () {
             // Handle Logout
+            Get.offAll(Mobilelayout());
             print("Logout tapped");
           },
         ),
