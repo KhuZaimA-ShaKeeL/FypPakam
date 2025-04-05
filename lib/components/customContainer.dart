@@ -5,19 +5,23 @@ class customContainer extends StatelessWidget {
   String imagePath;
   String count;
   String text;
+  double? height;
+  double?width;
 
-  customContainer(
-      {super.key,
-      required this.color,
-      required this.text,
-      required this.count,
-      required this.imagePath});
+  customContainer({super.key,
+    required this.color,
+    required this.text,
+    required this.count,
+    required this.imagePath,
+    this.height,
+    this.width
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color:color,
+          color: color,
           borderRadius: BorderRadiusDirectional.circular(10)),
       height: 101,
       width: 130,
@@ -27,7 +31,7 @@ class customContainer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(imagePath),
+            Image.asset(imagePath, height: height??25.0,width: width??25.0,fit:BoxFit.fill ,),
 
 
             SizedBox(

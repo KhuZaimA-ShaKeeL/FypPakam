@@ -1,10 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fyppakam/Pages/Mobile/ContactUsMobile.dart';
+import 'package:fyppakam/Pages/Mobile/ConvertBotsMobile.dart';
+import 'package:fyppakam/Pages/Mobile/HelpMobile.dart';
 import 'package:fyppakam/Pages/Mobile/MobileHome.dart';
 import 'package:fyppakam/Pages/Mobile/MobileLinkChecker.dart';
 import 'package:fyppakam/Pages/Mobile/MobileLinkConverter.dart';
 import 'package:fyppakam/Pages/Mobile/MobileShortner.dart';
 import 'package:fyppakam/Pages/Mobile/MobileTextReplace.dart';
+import 'package:fyppakam/Pages/Mobile/profileMobile.dart';
+import 'package:fyppakam/Pages/Mobile/settingMobile.dart';
 import 'package:fyppakam/Pages/Mobile/socialMobile.dart';
 import 'package:get/get.dart';
 
@@ -69,7 +74,7 @@ class customDrawerMobile extends StatelessWidget {
             style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
           ),
           onTap: () {
-            // Handle Converter Bots
+            Get.to(convertBotsMobile());
             print("Converter Bots tapped");
           },
         ),
@@ -130,6 +135,7 @@ class customDrawerMobile extends StatelessWidget {
           ),
           onTap: () {
             // Handle Settings
+            Get.to(settingMobile());
             print("Settings tapped");
           },
         ),
@@ -141,6 +147,7 @@ class customDrawerMobile extends StatelessWidget {
           ),
           onTap: () {
             // Handle Profile
+            Get.to(profileMobile());
             print("Profile tapped");
           },
         ),
@@ -152,6 +159,7 @@ class customDrawerMobile extends StatelessWidget {
           ),
           onTap: () {
             // Handle Contact Us
+            Get.to(contactUsMobile());
             print("Contact Us tapped");
           },
         ),
@@ -163,6 +171,8 @@ class customDrawerMobile extends StatelessWidget {
           ),
           onTap: () {
             // Handle Help
+
+            Get.to(helpMobile());
             print("Help tapped");
           },
         ),

@@ -14,6 +14,7 @@ class socialMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       body:SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(left: 8, right: 8),
