@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 class pakAmText extends StatelessWidget {
   double fontSize;
   double letterspacing;
-   pakAmText({super.key,required this.fontSize,required this.letterspacing});
+  FontWeight fontWeight;
+
+   pakAmText({super.key,required this.fontSize,required this.letterspacing,required this.fontWeight});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class pakAmText extends StatelessWidget {
             style: TextStyle(
               color: Colors.green,
               fontSize:fontSize,
-              fontWeight: FontWeight.w900,
+              fontWeight: fontWeight,
               letterSpacing:letterspacing,
             ),
           ),
@@ -23,7 +25,7 @@ class pakAmText extends StatelessWidget {
             style: TextStyle(
               color: Colors.black,
               fontSize: fontSize,
-              fontWeight: FontWeight.w900,
+              fontWeight: fontWeight,
               letterSpacing: letterspacing,
             ),
           ),

@@ -23,7 +23,7 @@ class MobileLoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: pakAmText(fontSize: 30, letterspacing: 10),
+        title: pakAmText(fontSize: 30, letterspacing: 10,fontWeight: FontWeight.w900),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

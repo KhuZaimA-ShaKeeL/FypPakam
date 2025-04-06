@@ -35,7 +35,7 @@ class DesktopLayout extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  pakAmText(fontSize: 50, letterspacing: 20.0),
+                  pakAmText(fontSize: 50, letterspacing: 20.0,fontWeight: FontWeight.w900,),
                   const SizedBox(height: 20),
 
                   // Buttons

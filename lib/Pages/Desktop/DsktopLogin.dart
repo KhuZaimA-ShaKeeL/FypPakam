@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:fyppakam/Pages/Desktop/DesktopHome.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopSignupPage.dart';
 import '../../components/CustomButton.dart';
 import '../../components/CustomButtonWithImage.dart';
 import '../../components/CustomTextField.dart';
 import '../../components/PasswordField.dart';
 import '../../components/pakamText.dart';
+import 'package:get/get.dart';
 
 class DesktopLoginPage extends StatelessWidget {
   DesktopLoginPage({super.key});
@@ -31,7 +33,7 @@ class DesktopLoginPage extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: Center(
-                      child: pakAmText(fontSize: 30, letterspacing: 10),
+                      child: pakAmText(fontSize: 30, letterspacing: 10,fontWeight: FontWeight.bold),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -167,6 +169,7 @@ class DesktopLoginPage extends StatelessWidget {
                                     radius: 20,
                                     onPressed: () {
                                       // Login logic here
+                                      Get.offAll(Desktophome());
                                     },
                                   ),
                                 ],

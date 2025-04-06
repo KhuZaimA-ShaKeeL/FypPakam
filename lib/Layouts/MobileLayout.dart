@@ -37,7 +37,7 @@ class Mobilelayout extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  pakAmText(fontSize: 50, letterspacing:20 ),
+                  pakAmText(fontSize: 50, letterspacing:20,fontWeight: FontWeight.w900 ),
                   SizedBox(height: 20),
 
                   // Buttons

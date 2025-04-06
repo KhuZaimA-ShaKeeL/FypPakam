@@ -28,7 +28,7 @@ class Rotatedlayout extends StatelessWidget {
               SizedBox(height: 30), // Add spacing
 
               // Text Section
-              pakAmText(fontSize: 50, letterspacing:20 ),
+              pakAmText(fontSize: 50, letterspacing:20,fontWeight: FontWeight.w900),
               SizedBox(height: 20),
 
               // Buttons

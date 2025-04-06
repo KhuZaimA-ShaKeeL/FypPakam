@@ -34,7 +34,7 @@ class Mobileappbarwidget extends StatelessWidget {
             Expanded(
               child: Center(
                 child:
-                pakAmText(fontSize: 20, letterspacing: 5), // Title
+                pakAmText(fontSize: 20, letterspacing: 5,fontWeight: FontWeight.w900,), // Title
               ),
             ),
             CircleAvatar(

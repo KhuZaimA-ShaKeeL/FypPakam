@@ -34,7 +34,7 @@ class DesktopSignUpPage extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: Center(
-                      child: pakAmText(fontSize: 30, letterspacing: 10),
+                      child: pakAmText(fontSize: 30, letterspacing: 10,fontWeight: FontWeight.bold),
                     ),
                   ),
                   SizedBox(height: 20),
