@@ -1,13 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fyppakam/Pages/Desktop/DesktopContactUs.dart';
+import 'package:fyppakam/Pages/Desktop/DesktopHelp.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopHome.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopLinkChecker.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopLinkConvert.dart';
+import 'package:fyppakam/Pages/Desktop/DesktopProfile.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopShortner.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopTextReplacer.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../Layouts/desktopLayout.dart';
 import '../Pages/Desktop/DesktopConvertBots.dart';
 import '../Pages/Mobile/MobileHome.dart';
 class Desktopsidebar extends StatelessWidget {
@@ -149,7 +153,7 @@ class Desktopsidebar extends StatelessWidget {
             ),
             onTap: () {
               // Handle Profile
-              //    Get.to(profileMobile());
+                Get.to(Desktopprofile());
               print("Profile tapped");
             },
           ),
@@ -161,7 +165,7 @@ class Desktopsidebar extends StatelessWidget {
             ),
             onTap: () {
               // Handle Contact Us
-              //      Get.to(contactUsMobile());
+                   Get.to(Desktopcontactus());
               print("Contact Us tapped");
             },
           ),
@@ -174,7 +178,7 @@ class Desktopsidebar extends StatelessWidget {
             onTap: () {
               // Handle Help
 
-              //         Get.to(helpMobile());
+                       Get.to(Desktophelp());
               print("Help tapped");
             },
           ),
@@ -186,7 +190,7 @@ class Desktopsidebar extends StatelessWidget {
             ),
             onTap: () {
               // Handle Logout
-              //    Get.offAll(Mobilelayout());
+                  Get.offAll(DesktopLayout());
               print("Logout tapped");
             },
           ),
