@@ -7,6 +7,7 @@ import 'package:fyppakam/Pages/Desktop/DesktopLinkChecker.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopLinkConvert.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopProfile.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopShortner.dart';
+import 'package:fyppakam/Pages/Desktop/DesktopSocialPage.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopTextReplacer.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -92,7 +93,7 @@ class Desktopsidebar extends StatelessWidget {
             ),
             onTap: () {
               // Handle Social
-              // Get.to(socialMobile();
+               Get.to(Desktopsocialpage());
               print("Social tapped");
             },
           ),

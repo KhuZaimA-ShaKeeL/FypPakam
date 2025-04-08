@@ -46,50 +46,50 @@ class manageMobile extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: (){
-                        print("Click on whatsApp logout");
+                        print("Click on WhatsApp logout");
                       },
-                      child: InkWell(
-                        onTap: (){
-                          print("Click on Telegram logout");
-                        },
-                        child: Container(
-                          padding:EdgeInsets.symmetric(horizontal: 5,vertical: 10) ,
-                          decoration: BoxDecoration(
-                              color: Color(0xFF89E469),
-                              border: Border.all(
-                                  width: 1
-                              ),
-                              borderRadius: BorderRadius.circular(15)
-                          ),
-                          child: Row(
-                            children: [
-                              Icon(Icons.logout),
-                              Text("LogUut Whatsapp",style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500
-                              ),),
-                            ],
-                          ),
+                      child: Container(
+                        padding:EdgeInsets.symmetric(horizontal: 5,vertical: 10) ,
+                        decoration: BoxDecoration(
+                            color: Color(0xFF89E469),
+                            border: Border.all(
+                                width: 1
+                            ),
+                            borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(Icons.logout),
+                            Text("LogUut Whatsapp",style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500
+                            ),),
+                          ],
                         ),
                       ),
                     ),
-                    Container(
-                      padding:EdgeInsets.symmetric(horizontal: 5,vertical: 10) ,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF9DD6EE),
-                          border: Border.all(
-                              width: 1
-                          ),
-                          borderRadius: BorderRadius.circular(15)
-                      ),
-                      child: Row(
-                        children: [
-                          Icon(Icons.logout),
-                          Text("LogOut Telegram",style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500
-                          ),),
-                        ],
+                    InkWell(
+                      onTap: () {
+                        print("Click on Telegram Logout");
+                      },
+                      child: Container(
+                        padding:EdgeInsets.symmetric(horizontal: 5,vertical: 10) ,
+                        decoration: BoxDecoration(
+                            color: Color(0xFF9DD6EE),
+                            border: Border.all(
+                                width: 1
+                            ),
+                            borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(Icons.logout),
+                            Text("LogOut Telegram",style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500
+                            ),),
+                          ],
+                        ),
                       ),
                     ),
                   ],

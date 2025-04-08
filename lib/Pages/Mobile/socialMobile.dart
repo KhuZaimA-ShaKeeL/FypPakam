@@ -49,50 +49,50 @@ class socialMobile extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: (){
-                        print("Click on whatsApp");
+                        print("Click on WhatsApp");
                       },
-                      child: InkWell(
-                        onTap: (){
-                          print("Click on Telegram");
-                        },
-                        child: Container(
-                          padding:EdgeInsets.symmetric(horizontal: 5,vertical: 10) ,
-                          decoration: BoxDecoration(
+                      child: Container(
+                        padding:EdgeInsets.symmetric(horizontal: 5,vertical: 10) ,
+                        decoration: BoxDecoration(
                             color: Color(0xFF89E469),
                             border: Border.all(
-                              width: 1
+                                width: 1
                             ),
                             borderRadius: BorderRadius.circular(15)
-                          ),
-                          child: Row(
-                            children: [
-                              Icon(Icons.add),
-                              Text("Add whatsApp",style: TextStyle(
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(Icons.add),
+                            Text("Add whatsApp",style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500
-                              ),),
-                            ],
-                          ),
+                            ),),
+                          ],
                         ),
                       ),
                     ),
-                    Container(
-                      padding:EdgeInsets.symmetric(horizontal: 5,vertical: 10) ,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF9DD6EE),
-                          border: Border.all(
-                              width: 1
-                          ),
-                          borderRadius: BorderRadius.circular(15)
-                      ),
-                      child: Row(
-                        children: [
-                          Icon(Icons.add),
-                          Text("Add Telegram",style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500
-                          ),),
-                        ],
+                    InkWell(
+                        onTap: () {
+                          print("Clcik on Telegram");
+                        },
+                      child: Container(
+                        padding:EdgeInsets.symmetric(horizontal: 5,vertical: 10) ,
+                        decoration: BoxDecoration(
+                            color: Color(0xFF9DD6EE),
+                            border: Border.all(
+                                width: 1
+                            ),
+                            borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(Icons.add),
+                            Text("Add Telegram",style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500
+                            ),),
+                          ],
+                        ),
                       ),
                     ),
                   ],

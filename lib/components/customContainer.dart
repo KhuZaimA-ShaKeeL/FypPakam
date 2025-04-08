@@ -25,8 +25,8 @@ class customContainer extends StatelessWidget {
     // Set a default value for `isDesktop` if it is null
     bool desktop = isDesktop ?? false;  // Default to false if isDesktop is null
 
-    double IconWidth = desktop ? 37 : 16.43;
-    double IconHeight = desktop ? 37 : 20.66;
+    double IconWidth = desktop ? 40 : 30;
+    double IconHeight = desktop ? 40 : 30;
 
     return Container(
       decoration: BoxDecoration(

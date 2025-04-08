@@ -31,12 +31,14 @@ class convertBotsMobile extends StatelessWidget {
                 text: "Total Available Bots",
                 count: "5",
                 imagePath: "assets/images/botIcon.png",
-                height: 40,
-                width: 40,
+              ),
+              SizedBox(
+                height: 10,
               ),
               ListView(
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
+                padding: EdgeInsets.symmetric(horizontal: 2),
                 children: [
                   customListTile(
                       botName: "Autoforwarding",
