@@ -7,13 +7,11 @@ import 'package:fyppakam/Pages/Desktop/DesktopLinkChecker.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopLinkConvert.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopProfile.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopShortner.dart';
+import 'package:fyppakam/Pages/Desktop/DesktopSocialPage.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopTextReplacer.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-
 import '../Layouts/desktopLayout.dart';
 import '../Pages/Desktop/DesktopConvertBots.dart';
-import '../Pages/Mobile/MobileHome.dart';
 class Desktopsidebar extends StatelessWidget {
   const Desktopsidebar({super.key});
 
@@ -21,9 +19,10 @@ class Desktopsidebar extends StatelessWidget {
   Widget build(BuildContext context) {
     double drawerHeight=MediaQuery.of(context).size.height*0.08;
     return  Container(
+      //     height: MediaQuery.of(context).size.height*0.9,
 
-    //  color: Colors.black,
-      child: Column(
+      //  color: Colors.black,
+      child:  Column(
         children: [
           Container(
             decoration: BoxDecoration(
@@ -61,7 +60,7 @@ class Desktopsidebar extends StatelessWidget {
 
                 ),
                 onTap: () {
-                   Get.offAll(Desktophome()); // Navigate to the Home screen
+                  Get.offAll(Desktophome()); // Navigate to the Home screen
                 },),
               ListTile(
                 leading: Icon(Icons.link),
@@ -71,7 +70,7 @@ class Desktopsidebar extends StatelessWidget {
                 ),
                 onTap: () {
                   // Handle Link Converter
-                    Get.to(Desktoplinkconvert());
+                  Get.to(Desktoplinkconvert());
                   print("Link Converter tapped");
                 },
               ),
@@ -83,7 +82,7 @@ class Desktopsidebar extends StatelessWidget {
                   style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
                 ),
                 onTap: () {
-                     Get.to(Desktopconvertbots());
+                  Get.to(Desktopconvertbots());
                   print("Converter Bots tapped");
                 },
               ),
@@ -95,7 +94,7 @@ class Desktopsidebar extends StatelessWidget {
                 ),
                 onTap: () {
                   // Handle Social
-                  // Get.to(socialMobile();
+                  Get.to(Desktopsocialpage());
                   print("Social tapped");
                 },
               ),
@@ -108,7 +107,7 @@ class Desktopsidebar extends StatelessWidget {
                 onTap: () {
                   // Handle Shortner
 
-                   Get.to(Desktopshortner());
+                  Get.to(Desktopshortner());
                   print("Shortner tapped");
                 },
               ),
@@ -132,7 +131,7 @@ class Desktopsidebar extends StatelessWidget {
                   style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
                 ),
                 onTap: () {
-                      Get.to(Desktoplinkchecker());
+                  Get.to(Desktoplinkchecker());
                   print("Link Checker tapped");
                 },
               ),
@@ -156,7 +155,7 @@ class Desktopsidebar extends StatelessWidget {
                 ),
                 onTap: () {
                   // Handle Profile
-                    Get.to(Desktopprofile());
+                  Get.to(Desktopprofile());
                   print("Profile tapped");
                 },
               ),
@@ -168,7 +167,7 @@ class Desktopsidebar extends StatelessWidget {
                 ),
                 onTap: () {
                   // Handle Contact Us
-                       Get.to(Desktopcontactus());
+                  Get.to(Desktopcontactus());
                   print("Contact Us tapped");
                 },
               ),
@@ -181,7 +180,7 @@ class Desktopsidebar extends StatelessWidget {
                 onTap: () {
                   // Handle Help
 
-                           Get.to(Desktophelp());
+                  Get.to(Desktophelp());
                   print("Help tapped");
                 },
               ),
@@ -193,7 +192,7 @@ class Desktopsidebar extends StatelessWidget {
                 ),
                 onTap: () {
                   // Handle Logout
-                      Get.offAll(DesktopLayout());
+                  Get.offAll(DesktopLayout());
                   print("Logout tapped");
                 },
               ),

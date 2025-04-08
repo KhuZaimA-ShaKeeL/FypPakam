@@ -51,17 +51,19 @@ class _DesktopcontactusState extends State<Desktopcontactus> {
                   // Left Sidebar with scrollable content
                   Expanded(
                     flex: 2,
-                    child: SingleChildScrollView(
-                      child: Container(
-                        padding: EdgeInsets.all(5),
+                    child: Container(
+                      height: MediaQuery.of(context).size.height*0.85,
+                      padding: EdgeInsets.only(left: 5,right: 5, top: 10, ),
+                      margin: EdgeInsets.only(bottom: 5),
                       decoration: BoxDecoration(
-                        borderRadius:BorderRadius.circular(10) ,
-                       border: Border.all(
-                         width: 1
-                       )
+                          borderRadius:BorderRadius.circular(10) ,
+                          border: Border.all(
+                              width: 1
+                          )
                       ),
-                        height: MediaQuery.of(context).size.height,
-                        child: Desktopsidebar(),
+                      child: SingleChildScrollView(
+                        child:   Desktopsidebar(),
+
                       ),
                     ),
                   ),
@@ -73,7 +75,9 @@ class _DesktopcontactusState extends State<Desktopcontactus> {
                   Expanded(
                     flex: 8,
                     child: Container(
+                      height: MediaQuery.of(context).size.height*0.85,
                       padding: EdgeInsets.all(10),
+                      margin: EdgeInsets.only(bottom: 5),
                       decoration: BoxDecoration(
                           borderRadius:BorderRadius.circular(10) ,
                           border: Border.all(
