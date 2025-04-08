@@ -53,6 +53,13 @@ class _DesktopcontactusState extends State<Desktopcontactus> {
                     flex: 2,
                     child: SingleChildScrollView(
                       child: Container(
+                        padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        borderRadius:BorderRadius.circular(10) ,
+                       border: Border.all(
+                         width: 1
+                       )
+                      ),
                         height: MediaQuery.of(context).size.height,
                         child: Desktopsidebar(),
                       ),
@@ -65,150 +72,159 @@ class _DesktopcontactusState extends State<Desktopcontactus> {
                   // Right Content wrapped in SingleChildScrollView for vertical scrolling
                   Expanded(
                     flex: 8,
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.vertical,
-                      // Allows vertical scrolling
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Desktopappbarintrowidget(),
-                          // Intro section for the right content
-                          SizedBox(height: 20),
-                          // Space between intro and custom containers
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                  flex: 6,
-                                  child: Column(
-                                    children: [
-                                      const Text(
-                                        "We are here to help feel free to contact us",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
-                                      ),
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      // Contact Information
-                                      _personalDetailRow(Icons.email_outlined,
-                                          "support@pakam.com", "support Email"),
-                                      _personalDetailRow(
-                                          Icons.email_outlined,
-                                          "salesquery@pakam.com",
-                                          "sales query Email"),
-                                      _personalDetailRow(
-                                          Icons.email_outlined,
-                                          "generalquery@pakam.com",
-                                          "general query Email"),
-                                      _personalDetailRow(
-                                          Icons.phone, "O21-2695242", "phone"),
-                                    ],
-                                  )),
-                              Spacer(),
-                              Expanded(
-                                flex: 4,
-                                child: Container(
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          borderRadius:BorderRadius.circular(10) ,
+                          border: Border.all(
+                              width: 1
+                          )
+                      ),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.vertical,
+                        // Allows vertical scrolling
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Desktopappbarintrowidget(),
+                            // Intro section for the right content
+                            SizedBox(height: 20),
+                            // Space between intro and custom containers
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                    flex: 6,
+                                    child: Column(
+                                      children: [
+                                        const Text(
+                                          "We are here to help feel free to contact us",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16),
+                                        ),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        // Contact Information
+                                        _personalDetailRow(Icons.email_outlined,
+                                            "support@pakam.com", "support Email"),
+                                        _personalDetailRow(
+                                            Icons.email_outlined,
+                                            "salesquery@pakam.com",
+                                            "sales query Email"),
+                                        _personalDetailRow(
+                                            Icons.email_outlined,
+                                            "generalquery@pakam.com",
+                                            "general query Email"),
+                                        _personalDetailRow(
+                                            Icons.phone, "O21-2695242", "phone"),
+                                      ],
+                                    )),
+                                Spacer(),
+                                Expanded(
+                                  flex: 4,
+                                  child: Container(
 
-                                  padding: const EdgeInsets.all(12),
-                                  margin: const EdgeInsets.only(top: 10),
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFFF5F5F5),
-                                    border:
-                                        Border.all(color: Colors.grey.shade300),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Column(
+                                    padding: const EdgeInsets.all(12),
+                                    margin: const EdgeInsets.only(top: 10),
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF5F5F5),
+                                      border:
+                                          Border.all(color: Colors.grey.shade300),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: Column(
 
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      _textField("Enter Name",
-                                          controller: nameController),
-                                      _textField("Enter Email",
-                                          controller: emailController),
-                                      _textField("Subject",
-                                          controller: subjectController),
-                                      _textField("ProblemDescription",
-                                          controller: descriptionController,
-                                          maxLines: 4),
-                                      const SizedBox(height: 10),
-                                      InkWell(
-                                        onTap: () async {
-                                          FilePickerResult? result =
-                                              await FilePicker.platform
-                                                  .pickFiles(
-                                                      type: FileType.custom,
-                                                      allowedExtensions: [
-                                                        'pdf',
-                                                        'mp4'
-                                                      ],
-                                                      allowMultiple: true);
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        _textField("Enter Name",
+                                            controller: nameController),
+                                        _textField("Enter Email",
+                                            controller: emailController),
+                                        _textField("Subject",
+                                            controller: subjectController),
+                                        _textField("ProblemDescription",
+                                            controller: descriptionController,
+                                            maxLines: 4),
+                                        const SizedBox(height: 10),
+                                        InkWell(
+                                          onTap: () async {
+                                            FilePickerResult? result =
+                                                await FilePicker.platform
+                                                    .pickFiles(
+                                                        type: FileType.custom,
+                                                        allowedExtensions: [
+                                                          'pdf',
+                                                          'mp4'
+                                                        ],
+                                                        allowMultiple: true);
 
-                                          if (result != null) {
-                                            setState(() {
-                                              selectedFile = result.files.first;
-                                            });
+                                            if (result != null) {
+                                              setState(() {
+                                                selectedFile = result.files.first;
+                                              });
 
-                                            print(
-                                                "File Name: ${selectedFile!.name}");
-                                            print(
-                                                "File Path: ${selectedFile!.path}");
-                                            print(
-                                                "File Size: ${selectedFile!.size}");
-                                          } else {
-                                            print("User canceled the picker");
-                                          }
-                                        },
-                                        child: Container(
-                                          padding: const EdgeInsets.symmetric(
-                                              vertical: 10, horizontal: 20),
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(10),
-                                            border: Border.all(width: 1),
-                                          ),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text(
-                                                selectedFile != null
-                                                    ? selectedFile!.name
-                                                    : "Additional Files",
-                                                style: const TextStyle(
-                                                    fontSize: 16,
-                                                    fontWeight:
-                                                        FontWeight.bold),
-                                              ),
-                                              const Icon(
-                                                  Icons.file_copy_outlined),
-                                            ],
+                                              print(
+                                                  "File Name: ${selectedFile!.name}");
+                                              print(
+                                                  "File Path: ${selectedFile!.path}");
+                                              print(
+                                                  "File Size: ${selectedFile!.size}");
+                                            } else {
+                                              print("User canceled the picker");
+                                            }
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.symmetric(
+                                                vertical: 10, horizontal: 20),
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              border: Border.all(width: 1),
+                                            ),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Text(
+                                                  selectedFile != null
+                                                      ? selectedFile!.name
+                                                      : "Additional Files",
+                                                  style: const TextStyle(
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                ),
+                                                const Icon(
+                                                    Icons.file_copy_outlined),
+                                              ],
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      const SizedBox(height: 50),
-                                      Custombutton(
-                                          label: "Submit",
-                                          radius: 10,
-                                          onPressed: () {
-                                            print(
-                                                "Name: ${nameController.text}");
-                                            print(
-                                                "Email: ${emailController.text}");
-                                            print(
-                                                "Subject: ${subjectController.text}");
-                                            print(
-                                                "Description: ${descriptionController.text}");
-                                          })
-                                    ],
+                                        const SizedBox(height: 50),
+                                        Custombutton(
+                                            label: "Submit",
+                                            radius: 10,
+                                            onPressed: () {
+                                              print(
+                                                  "Name: ${nameController.text}");
+                                              print(
+                                                  "Email: ${emailController.text}");
+                                              print(
+                                                  "Subject: ${subjectController.text}");
+                                              print(
+                                                  "Description: ${descriptionController.text}");
+                                            })
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              )
-                            ],
-                          )
-                        ],
+                                )
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),

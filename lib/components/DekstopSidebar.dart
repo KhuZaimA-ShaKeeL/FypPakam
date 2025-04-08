@@ -21,13 +21,10 @@ class Desktopsidebar extends StatelessWidget {
   Widget build(BuildContext context) {
     double drawerHeight=MediaQuery.of(context).size.height*0.08;
     return  Container(
+
     //  color: Colors.black,
-      child: ListView(
-        shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
-        //  padding: EdgeInsets.zero,
-        children: <Widget>[
-          // Reduced DrawerHeader height
+      child: Column(
+        children: [
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadiusDirectional.circular(10),
@@ -50,149 +47,157 @@ class Desktopsidebar extends StatelessWidget {
               ],
             ),
           ),
-          ListTile(
-            leading: Icon(Icons.home),
-            title: Text(
-              "Home",
-              style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
+          ListView(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            //  padding: EdgeInsets.zero,
+            children: <Widget>[
+              // Reduced DrawerHeader height
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text(
+                  "Home",
+                  style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
 
-            ),
-            onTap: () {
-               Get.offAll(Desktophome()); // Navigate to the Home screen
-            },),
-          ListTile(
-            leading: Icon(Icons.link),
-            title: Text(
-              'Link Converter',
-              style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
-            ),
-            onTap: () {
-              // Handle Link Converter
-                Get.to(Desktoplinkconvert());
-              print("Link Converter tapped");
-            },
-          ),
+                ),
+                onTap: () {
+                   Get.offAll(Desktophome()); // Navigate to the Home screen
+                },),
+              ListTile(
+                leading: Icon(Icons.link),
+                title: Text(
+                  'Link Converter',
+                  style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
+                ),
+                onTap: () {
+                  // Handle Link Converter
+                    Get.to(Desktoplinkconvert());
+                  print("Link Converter tapped");
+                },
+              ),
 
-          ListTile(
-            leading: Icon(CupertinoIcons.light_max),
-            title: Text(
-              'Converter Bots',
-              style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
-            ),
-            onTap: () {
-                 Get.to(Desktopconvertbots());
-              print("Converter Bots tapped");
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.people),
-            title: Text(
-              'Social',
-              style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
-            ),
-            onTap: () {
-              // Handle Social
-              // Get.to(socialMobile();
-              print("Social tapped");
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.short_text),
-            title: Text(
-              'Shortner',
-              style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
-            ),
-            onTap: () {
-              // Handle Shortner
+              ListTile(
+                leading: Icon(CupertinoIcons.light_max),
+                title: Text(
+                  'Converter Bots',
+                  style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
+                ),
+                onTap: () {
+                     Get.to(Desktopconvertbots());
+                  print("Converter Bots tapped");
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.people),
+                title: Text(
+                  'Social',
+                  style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
+                ),
+                onTap: () {
+                  // Handle Social
+                  // Get.to(socialMobile();
+                  print("Social tapped");
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.short_text),
+                title: Text(
+                  'Shortner',
+                  style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
+                ),
+                onTap: () {
+                  // Handle Shortner
 
-               Get.to(Desktopshortner());
-              print("Shortner tapped");
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.text_fields),
-            title: Text(
-              'Text Replacer',
-              style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
-            ),
-            onTap: () {
-              // Handle Text Replacer
+                   Get.to(Desktopshortner());
+                  print("Shortner tapped");
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.text_fields),
+                title: Text(
+                  'Text Replacer',
+                  style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
+                ),
+                onTap: () {
+                  // Handle Text Replacer
 
-              Get.to(Desktoptextreplacer());
-              print("Text Replacer tapped");
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.check_circle),
-            title: Text(
-              'Link Checker',
-              style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
-            ),
-            onTap: () {
-                  Get.to(Desktoplinkchecker());
-              print("Link Checker tapped");
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.settings),
-            title: Text(
-              'Settings',
-              style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
-            ),
-            onTap: () {
-              // Handle Settings
-              //    Get.to(settingMobile());
-              print("Settings tapped");
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text(
-              'Profile',
-              style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
-            ),
-            onTap: () {
-              // Handle Profile
-                Get.to(Desktopprofile());
-              print("Profile tapped");
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.contact_mail),
-            title: Text(
-              'Contact Us',
-              style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
-            ),
-            onTap: () {
-              // Handle Contact Us
-                   Get.to(Desktopcontactus());
-              print("Contact Us tapped");
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.help),
-            title: Text(
-              'Help',
-              style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
-            ),
-            onTap: () {
-              // Handle Help
+                  Get.to(Desktoptextreplacer());
+                  print("Text Replacer tapped");
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.check_circle),
+                title: Text(
+                  'Link Checker',
+                  style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
+                ),
+                onTap: () {
+                      Get.to(Desktoplinkchecker());
+                  print("Link Checker tapped");
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.settings),
+                title: Text(
+                  'Settings',
+                  style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
+                ),
+                onTap: () {
+                  // Handle Settings
+                  //    Get.to(settingMobile());
+                  print("Settings tapped");
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.person),
+                title: Text(
+                  'Profile',
+                  style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
+                ),
+                onTap: () {
+                  // Handle Profile
+                    Get.to(Desktopprofile());
+                  print("Profile tapped");
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.contact_mail),
+                title: Text(
+                  'Contact Us',
+                  style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
+                ),
+                onTap: () {
+                  // Handle Contact Us
+                       Get.to(Desktopcontactus());
+                  print("Contact Us tapped");
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.help),
+                title: Text(
+                  'Help',
+                  style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
+                ),
+                onTap: () {
+                  // Handle Help
 
-                       Get.to(Desktophelp());
-              print("Help tapped");
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.logout),
-            title: Text(
-              'Logout',
-              style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
-            ),
-            onTap: () {
-              // Handle Logout
-                  Get.offAll(DesktopLayout());
-              print("Logout tapped");
-            },
+                           Get.to(Desktophelp());
+                  print("Help tapped");
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.logout),
+                title: Text(
+                  'Logout',
+                  style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
+                ),
+                onTap: () {
+                  // Handle Logout
+                      Get.offAll(DesktopLayout());
+                  print("Logout tapped");
+                },
+              ),
+            ],
           ),
         ],
       ),
