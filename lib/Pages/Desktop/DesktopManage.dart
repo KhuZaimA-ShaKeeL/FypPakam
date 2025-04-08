@@ -9,9 +9,11 @@ import '../../components/customContainer.dart';
 class Desktopmanage extends StatelessWidget {
   const Desktopmanage({super.key});
 
+
   @override
   Widget build(BuildContext context) {
-  final SwitchControllers switchController=Get.put(SwitchControllers());
+  final SwitchControllers switchControllerWhatsApp=Get.put(SwitchControllers(),tag: "WhatsAPP");
+  final SwitchControllers switchControllerTelegram=Get.put(SwitchControllers(),tag:"Telegram");
     return Scaffold(
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 8),
@@ -222,9 +224,9 @@ class Desktopmanage extends StatelessWidget {
                                               ];
 
 // Ensure switch list has same length
-                                              if (switchController.isCheckedList.length < groupNames.length) {
-                                                for (int i = switchController.isCheckedList.length; i < groupNames.length; i++) {
-                                                  switchController.addSwitch(false); // Adds 'false' for each new group
+                                              if (switchControllerWhatsApp.isCheckedList.length < groupNames.length) {
+                                                for (int i = switchControllerWhatsApp.isCheckedList.length; i < groupNames.length; i++) {
+                                                  switchControllerWhatsApp.addSwitch(false); // Adds 'false' for each new group
                                                 }
                                               }
                                               return Column(
@@ -236,9 +238,9 @@ class Desktopmanage extends StatelessWidget {
                                                       Expanded(
                                                         flex: 2,
                                                         child: Obx(() => Switch(
-                                                          value: switchController.isCheckedList[index],
+                                                          value: switchControllerWhatsApp.isCheckedList[index],
                                                           onChanged: (val) {
-                                                            switchController.setButton(index, val);
+                                                            switchControllerWhatsApp.setButton(index, val);
                                                           },
                                                           activeColor: Colors.green,
                                                         )),
@@ -334,9 +336,9 @@ class Desktopmanage extends StatelessWidget {
                                               ];
 
 // Ensure switch list has same length
-                                              if (switchController.isCheckedList.length < groupNames.length) {
-                                                for (int i = switchController.isCheckedList.length; i < groupNames.length; i++) {
-                                                  switchController.addSwitch(false); // Adds 'false' for each new group
+                                              if (switchControllerTelegram.isCheckedList.length < groupNames.length) {
+                                                for (int i = switchControllerTelegram.isCheckedList.length; i < groupNames.length; i++) {
+                                                  switchControllerTelegram.addSwitch(false); // Adds 'false' for each new group
                                                 }
                                               }
                                               return Column(
@@ -348,9 +350,9 @@ class Desktopmanage extends StatelessWidget {
                                                       Expanded(
                                                         flex: 2,
                                                         child: Obx(() => Switch(
-                                                          value: switchController.isCheckedList[index],
+                                                          value: switchControllerTelegram.isCheckedList[index],
                                                           onChanged: (val) {
-                                                            switchController.setButton(index, val);
+                                                            switchControllerTelegram.setButton(index, val);
                                                           },
                                                           activeColor: Colors.green,
                                                         )),

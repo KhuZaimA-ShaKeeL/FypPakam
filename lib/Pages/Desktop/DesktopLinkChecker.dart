@@ -13,7 +13,6 @@ class Desktoplinkchecker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final SwitchController controller =Get.put(SwitchController());
     final linkController=TextEditingController();
     return Scaffold(
       body: Container(

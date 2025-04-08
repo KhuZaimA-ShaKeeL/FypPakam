@@ -13,7 +13,7 @@ class Desktoptextreplacer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final SwitchController controller = Get.put(SwitchController());
+    final SwitchController controller = Get.put(SwitchController(),tag: "textReplacer");
     final productController = TextEditingController();
     final coupanController = TextEditingController();
     return Scaffold(

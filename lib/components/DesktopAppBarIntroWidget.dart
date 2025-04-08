@@ -5,8 +5,8 @@ class Desktopappbarintrowidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-
-      padding: EdgeInsets.symmetric(horizontal: 10,vertical: 20),
+height: MediaQuery.of(context).size.height*0.08,
+      padding: EdgeInsets.symmetric(horizontal: 16,),
       alignment: Alignment.centerLeft,
       decoration: BoxDecoration(
         borderRadius: BorderRadiusDirectional.circular(10),
