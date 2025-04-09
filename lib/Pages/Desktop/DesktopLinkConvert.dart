@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fyppakam/Controller/SwitchController.dart';
 import 'package:fyppakam/components/customContainer.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../../components/CustomButton.dart';
 import '../../components/DekstopSidebar.dart';

@@ -20,9 +20,9 @@ class customListTile extends StatelessWidget {
     return ListTile(
       contentPadding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
       leading: CircleAvatar(
-        child: Image.asset("assets/images/botIcong.png"),
         backgroundColor: Colors.transparent,
         radius: 30,
+        child: Image.asset("assets/images/botIcong.png"),
       ),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       title: Column(

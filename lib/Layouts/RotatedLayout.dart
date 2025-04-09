@@ -39,22 +39,22 @@ class Rotatedlayout extends StatelessWidget {
                   children: [
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text("Login"),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.green,
                         foregroundColor: Colors.black,
                         minimumSize: Size(120, 40),
                       ),
+                      child: Text("Login"),
                     ),
                     SizedBox(width: 50),
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text("SignUp"),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.green,
                         foregroundColor: Colors.black,
                         minimumSize: Size(120, 40),
                       ),
+                      child: Text("SignUp"),
                     ),
                   ],
                 ),

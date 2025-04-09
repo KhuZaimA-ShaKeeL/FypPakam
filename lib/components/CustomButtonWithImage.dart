@@ -13,11 +13,11 @@ class CustomButtonWithImage extends StatelessWidget {
       child: ElevatedButton(
         onPressed:onPressed,
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.transparent),
-          elevation: MaterialStateProperty.all(0), // No shadow
-          overlayColor: MaterialStateProperty.all(Colors.transparent),
+          backgroundColor: WidgetStateProperty.all(Colors.transparent),
+          elevation: WidgetStateProperty.all(0), // No shadow
+          overlayColor: WidgetStateProperty.all(Colors.transparent),
           splashFactory: NoSplash.splashFactory,
-          shape: MaterialStateProperty.all(
+          shape: WidgetStateProperty.all(
             RoundedRectangleBorder(
               side: BorderSide(width: 2),
               borderRadius: BorderRadius.circular(8), // Rounded corners

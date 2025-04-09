@@ -4,10 +4,7 @@ import 'package:fyppakam/components/CustomDrawerMobile.dart';
 import 'package:fyppakam/components/customContainer.dart';
 import 'package:fyppakam/components/mobileAppBarWidget.dart';
 import 'package:fyppakam/components/mobileAppbarIntroWidget.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
-import 'MobileHome.dart';
 
 class Mobilelinkchecker extends StatelessWidget {
    Mobilelinkchecker({super.key});

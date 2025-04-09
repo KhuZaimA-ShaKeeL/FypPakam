@@ -62,7 +62,7 @@ class profileMobile extends StatelessWidget {
                 ),
 
                 // Tab Content
-                Container(
+                SizedBox(
                   height: 400, // You can adjust height as needed
                   child: TabBarView(
                     children: [

@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopManage.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../../components/DekstopSidebar.dart';
 import '../../components/DesktopAppBarIntroWidget.dart';
 import '../../components/DesktopAppbarWidget.dart';
 import '../../components/customContainer.dart';
-import '../Mobile/manageMobile.dart';
 
 class Desktopsocialpage extends StatelessWidget {
   const Desktopsocialpage({super.key});
@@ -80,7 +78,7 @@ class Desktopsocialpage extends StatelessWidget {
                               spacing: 5,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Container(
+                                SizedBox(
                                   width:MediaQuery.of(context).size.width*0.4,
                                    // color: Colors.black,
 

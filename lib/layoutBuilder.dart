@@ -8,7 +8,7 @@ class layoutBuilder extends StatelessWidget {
   final Widget webLayout;
   final Widget rotatedLayout;
 
-  layoutBuilder({required this.mobileLayout,required this.desktopLayout,required this.webLayout,required this.rotatedLayout});
+  const layoutBuilder({super.key, required this.mobileLayout,required this.desktopLayout,required this.webLayout,required this.rotatedLayout});
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
