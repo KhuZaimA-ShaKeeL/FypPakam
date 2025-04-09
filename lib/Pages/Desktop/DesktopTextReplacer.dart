@@ -98,8 +98,8 @@ class Desktoptextreplacer extends StatelessWidget {
                                               imagePath:
                                                   "assets/images/linkIcon.png",
                                               isDesktop: true,
-                                              height: 177,
-                                              width: 230,
+                                              height: MediaQuery.of(context).size.height*0.25,
+                                              width: MediaQuery.of(context).size.width*0.15,
                                             ),
                                             customContainer(
                                               color: Color(0xFFEAA982),
@@ -107,8 +107,8 @@ class Desktoptextreplacer extends StatelessWidget {
                                               count: "51",
                                               imagePath:
                                                   "assets/images/shortnerIcon.png",
-                                              height: 177,
-                                              width: 230,
+                                              height: MediaQuery.of(context).size.height*0.25,
+                                              width: MediaQuery.of(context).size.width*0.15,
                                               isDesktop: true,
                                             ),
                                           ],

@@ -97,8 +97,8 @@ class Desktopmanage extends StatelessWidget {
                                               imagePath:
                                               "assets/images/telegramIcon.png",
                                               isDesktop: true,
-                                              height: 177,
-                                              width: 230,
+                                              height: MediaQuery.of(context).size.height*0.25,
+                                              width: MediaQuery.of(context).size.width*0.15,
                                             ),
                                             customContainer(
                                               color: Color(0xFFB1EEBC),
@@ -106,8 +106,8 @@ class Desktopmanage extends StatelessWidget {
                                               count: "5",
                                               imagePath:
                                               "assets/images/whatsappIcon.png",
-                                              height: 177,
-                                              width: 230,
+                                              height: MediaQuery.of(context).size.height*0.25,
+                                              width: MediaQuery.of(context).size.width*0.15,
                                               isDesktop: true,
                                             ),
                                             Spacer(),
