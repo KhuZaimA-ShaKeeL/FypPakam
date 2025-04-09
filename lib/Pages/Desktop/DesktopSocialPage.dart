@@ -23,9 +23,9 @@ class Desktopsocialpage extends StatelessWidget {
           children: [
             // AppBar
             Desktopappbarwidget(),
-            SizedBox(height: 20), // Space between AppBar and main content
+            SizedBox(height: 20),
 
-            // Row to split Sidebar and Content
+            // Row to split Sidebar and Contents
             Expanded(
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,

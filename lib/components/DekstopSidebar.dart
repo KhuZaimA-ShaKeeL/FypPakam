@@ -143,7 +143,7 @@ class Desktopsidebar extends StatelessWidget {
                   style: TextStyle(color: Color(0xFF43A121)), // Hex color #43A121
                 ),
                 onTap: () {
-                  // Handle Settings
+                  // Handle Setting
                       Get.to(Desktopsetting());
                   print("Settings tapped");
                 },

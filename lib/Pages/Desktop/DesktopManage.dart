@@ -17,7 +17,7 @@ class Desktopmanage extends StatelessWidget {
     return Scaffold(
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 8),
-        // Adding margin for the main body
+
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

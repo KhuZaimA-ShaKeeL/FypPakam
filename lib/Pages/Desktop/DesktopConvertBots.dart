@@ -13,7 +13,7 @@ class Desktopconvertbots extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.symmetric(horizontal: 8), // Adding margin for the main body
+        margin: EdgeInsets.symmetric(horizontal: 8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

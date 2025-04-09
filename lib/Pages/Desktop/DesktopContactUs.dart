@@ -41,7 +41,7 @@ class _DesktopcontactusState extends State<Desktopcontactus> {
           children: [
             // AppBar
             Desktopappbarwidget(),
-            SizedBox(height: 20), // Space between AppBar and main content
+            SizedBox(height: 20),
 
             // Row to split Sidebar and Content
             Expanded(

@@ -19,7 +19,7 @@ class Desktoptextreplacer extends StatelessWidget {
     return Scaffold(
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 8),
-        // Adding margin for the main body
+        // Adding margin for the main
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

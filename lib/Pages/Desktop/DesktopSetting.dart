@@ -32,7 +32,7 @@ class _DesktopsettingState extends State<Desktopsetting> {
   void initState() {
     super.initState();
 
-    // Initialize switch lists
+    // Initialize switch list
     _initializeSwitches(switchController1);
     _initializeSwitches(switchController2);
     _initializeSwitches(switchController3);

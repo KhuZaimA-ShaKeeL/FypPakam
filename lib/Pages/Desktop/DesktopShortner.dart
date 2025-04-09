@@ -27,7 +27,7 @@ class Desktopshortner extends StatelessWidget {
             Desktopappbarwidget(),
             SizedBox(height: 20), // Space between AppBar and main content
 
-            // Row to split Sidebar and Content
+
             Expanded(
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
