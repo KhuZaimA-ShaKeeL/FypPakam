@@ -6,6 +6,7 @@ import 'package:fyppakam/Pages/Desktop/DesktopHome.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopLinkChecker.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopLinkConvert.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopProfile.dart';
+import 'package:fyppakam/Pages/Desktop/DesktopSetting.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopShortner.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopSocialPage.dart';
 import 'package:fyppakam/Pages/Desktop/DesktopTextReplacer.dart';
@@ -143,7 +144,7 @@ class Desktopsidebar extends StatelessWidget {
                 ),
                 onTap: () {
                   // Handle Settings
-                  //    Get.to(settingMobile());
+                      Get.to(Desktopsetting());
                   print("Settings tapped");
                 },
               ),

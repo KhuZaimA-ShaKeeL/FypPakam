@@ -7,7 +7,7 @@ class Desktopappbarwidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      margin: EdgeInsets.only(top:30),
+      margin: EdgeInsets.only(top:20),
       //           padding: EdgeInsets.symmetric(horizontal: 16,),
       decoration: BoxDecoration(
         color: Colors.white, // Background color

@@ -28,9 +28,20 @@ class Desktopprofile extends StatelessWidget {
                     // Left Sidebar with scrollable content
                     Expanded(
                       flex: 2,
-                      child: SingleChildScrollView(
-                        child:   Desktopsidebar(),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height*0.85,
+                        padding: EdgeInsets.only(left: 5,right: 5, top: 10, ),
+                        margin: EdgeInsets.only(bottom: 10),
+                        decoration: BoxDecoration(
+                            borderRadius:BorderRadius.circular(10) ,
+                            border: Border.all(
+                                width: 1
+                            )
+                        ),
+                        child: SingleChildScrollView(
+                          child:   Desktopsidebar(),
 
+                        ),
                       ),
                     ),
 
@@ -159,7 +170,32 @@ class Desktopprofile extends StatelessWidget {
                                     ),
 
                                     // AFFILIATOR TAB
-                                    Center(child: Text("Affiliator Info")),
+                                    Container(
+                                      margin: EdgeInsets.only(top:12),
+                                      padding: EdgeInsets.all(12),
+                                      decoration: BoxDecoration(
+                                        color: Color(0xFFF5F5F5),
+                                        borderRadius: BorderRadius.circular(12),
+                                        border: Border.all(color: Colors.grey.shade400),
+                                      ),
+                                      child: SingleChildScrollView(
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text('Affiliator Details',
+                                                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                                            SizedBox(height: 20),
+
+                                            _personalDetailsAffiliator("assets/images/bataImage.png", 'gh09321', 'Bata',context),
+                                           _personalDetailsAffiliator("assets/images/sapphireImage.png", 'gf00981', 'Sapphire',context),
+                                            _personalDetailsAffiliator("assets/images/outfittersImage.png", 'gf09821', 'Outfitters',context),
+                                            _personalDetailsAffiliator("assets/images/darazImage.png", 'gh09832', 'Daraz',context),
+                                            _personalDetailsAffiliator("assets/images/amazoneImage.png", 'gh67676', 'Amazon',context),
+
+                                          ],
+                                        ),
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
@@ -192,10 +228,51 @@ Widget _personalDetailRow(IconData icon, String subtitle, String title,BuildCont
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+
               Text(title, style: TextStyle(fontSize: 16)),
               Text(subtitle, style: TextStyle(color: Colors.grey)),
               SizedBox(height: 4),
               Divider(thickness: 2,color: Colors.black,endIndent: MediaQuery.of(context).size.width*0.3),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
+}
+Widget _personalDetailsAffiliator(String ImagePath, String subtitle, String title, BuildContext context) {
+  return Padding(
+    padding: const EdgeInsets.only(bottom: 12.0),
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          height: 50,
+          width: 50,
+          decoration: BoxDecoration(
+           // color: Colors.white, // Set white background
+            borderRadius: BorderRadius.circular(8), // Optional: rounded corners
+          ),
+          padding: EdgeInsets.all(4), // Optional: for spacing inside the box
+          child: Image.asset(
+            ImagePath,
+            fit: BoxFit.contain,
+          ),
+        ),
+        SizedBox(width: 10),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text("Brand name", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+              Text(title, style: TextStyle(fontSize: 14)),
+              Text(subtitle, style: TextStyle(color: Colors.grey)),
+              SizedBox(height: 4),
+              Divider(
+                thickness: 2,
+                color: Colors.black,
+                endIndent: MediaQuery.of(context).size.width * 0.3,
+              ),
             ],
           ),
         ),

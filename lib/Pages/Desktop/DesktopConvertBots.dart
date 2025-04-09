@@ -74,8 +74,8 @@ class Desktopconvertbots extends StatelessWidget {
                                 color: Color(0xFF9DD6EE),
                                 borderRadius: BorderRadiusDirectional.circular(10),
                               ),
-                              height: 177,
-                              width: 230,
+                              height: MediaQuery.of(context).size.height*0.25,
+                              width: MediaQuery.of(context).size.width*0.15,
                               child: Container(
                                 margin: EdgeInsets.only(top: 15, left: 2, right: 2),
                                 child: Column(
@@ -116,33 +116,28 @@ class Desktopconvertbots extends StatelessWidget {
                               ),
                             ),
                             SizedBox(height: 20,),
-                            ListView(
-                              shrinkWrap: true,
-                              physics: NeverScrollableScrollPhysics(),
-                              children: [
-                                Customdesktopbottile(
-                                    botName: "Autoforwarding",
-                                    botCost: "2",
-                                    botUsername: "@pakamautoforwarding"),
-                                SizedBox(height: 10,),
-                                Customdesktopbottile(
-                                    botName: "Shortner",
-                                    botCost: "2",
-                                    botUsername: "@pakamshortner"),
-                                SizedBox(height: 10,),
-                                Customdesktopbottile(
-                                    botName: "Text Replacer",
-                                    botCost: "2",
-                                    botUsername: "@pakamtextreplacing"),
-                                SizedBox(height: 10,),
-                                Customdesktopbottile(
-                                    botName: "Link Checking",
-                                    botCost: "2",
-                                    botUsername: "@pakamtextreplacing"),
-                                SizedBox(height: 20),
+                            Customdesktopbottile(
+                                botName: "Autoforwarding",
+                                botCost: "2",
+                                botUsername: "@pakamautoforwarding"),
+                            SizedBox(height: 10,),
+                            Customdesktopbottile(
+                                botName: "Shortner",
+                                botCost: "2",
+                                botUsername: "@pakamshortner"),
+                            SizedBox(height: 10,),
+                            Customdesktopbottile(
+                                botName: "Text Replacer",
+                                botCost: "2",
+                                botUsername: "@pakamtextreplacing"),
+                            SizedBox(height: 10,),
+                            Customdesktopbottile(
+                                botName: "Link Checking",
+                                botCost: "2",
+                                botUsername: "@pakamtextreplacing"),
+                            SizedBox(height: 20),
 
-                              ],
-                            ),
+
                           ],
                         ),
                       ),

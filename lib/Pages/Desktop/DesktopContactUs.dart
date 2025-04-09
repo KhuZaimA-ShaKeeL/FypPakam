@@ -259,7 +259,7 @@ Widget _textField(String hint,
   );
 }
 
-Widget _personalDetailRow(IconData icon, String title, String subtitle) {
+Widget _personalDetailRow(IconData icon, String subtitle, String title) {
   return Padding(
     padding: const EdgeInsets.only(bottom: 12.0),
     child: Row(

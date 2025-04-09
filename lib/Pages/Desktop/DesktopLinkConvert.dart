@@ -50,7 +50,6 @@ class Desktoplinkconvert extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 20), // Space between Sidebar and Content
-
                   // Right Content wrapped in SingleChildScrollView for vertical scrolling
                   Expanded(
                     flex: 8,
@@ -92,16 +91,16 @@ class Desktoplinkconvert extends StatelessWidget {
                                               count: "49",
                                               imagePath: "assets/images/linkIcon.png",
                                               isDesktop: true,
-                                              height: 177,
-                                              width: 230,
+                                              height: MediaQuery.of(context).size.height*0.25,
+                                              width: MediaQuery.of(context).size.width*0.15,
                                             ),
                                             customContainer(
                                               color: Color(0xFFEAA982),
                                               text: "Remaining Count",
                                               count: "51",
                                               imagePath: "assets/images/shortnerIcon.png",
-                                              height: 177,
-                                              width: 230,
+                                              height: MediaQuery.of(context).size.height*0.25,
+                                              width: MediaQuery.of(context).size.width*0.15,
                                               isDesktop: true,
                                             ),
                                           ],
