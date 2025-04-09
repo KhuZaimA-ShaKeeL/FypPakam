@@ -1,11 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fyppakam/components/CustomDrawerMobile.dart'; // Ensure this import is correct
 import 'package:fyppakam/components/customContainer.dart';
 import 'package:fyppakam/components/mobileAppBarWidget.dart';
 import 'package:fyppakam/components/mobileAppbarIntroWidget.dart';
-import 'package:fyppakam/components/pakamText.dart';
-import 'package:get/get.dart';
 
 class Mobilehome extends StatelessWidget {
   const Mobilehome({super.key});

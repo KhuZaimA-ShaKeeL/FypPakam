@@ -134,7 +134,7 @@ class _DesktophelpState extends State<Desktophelp> {
                                   mainAxisAlignment:MainAxisAlignment.end,
                                   children: [
 
-                                    Container(
+                                    SizedBox(
                                       width:500,
 
                                       child: TextField(

@@ -50,23 +50,23 @@ class Mobilelayout extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(context,MaterialPageRoute(builder: (context) => MobileLoginPage(),));
                           },
-                          child: Text("Login"),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green,
                             foregroundColor: Colors.black,
                             minimumSize: Size(120, 40),
                           ),
+                          child: Text("Login"),
                         ),
                         ElevatedButton(
                           onPressed: () {
                             Get.to(Mobilesignuppage());
                           },
-                          child: Text("SignUp"),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green,
                             foregroundColor: Colors.black,
                             minimumSize: Size(120, 40),
                           ),
+                          child: Text("SignUp"),
                         ),
                       ],
                     ),

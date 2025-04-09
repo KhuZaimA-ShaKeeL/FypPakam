@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fyppakam/Pages/Mobile/manageMobile.dart';
 import 'package:fyppakam/components/CustomDrawerMobile.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../../components/customContainer.dart';
 import '../../components/mobileAppBarWidget.dart';

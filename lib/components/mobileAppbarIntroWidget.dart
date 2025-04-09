@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 class Mobileappbarintrowidget extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
-   Mobileappbarintrowidget({super.key,required this.scaffoldKey});
+   const Mobileappbarintrowidget({super.key,required this.scaffoldKey});
 
   @override
   Widget build(BuildContext context) {
