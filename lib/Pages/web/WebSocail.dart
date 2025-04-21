@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:fyppakam/Pages/Desktop/DesktopManage.dart';
+import 'package:fyppakam/Pages/web/WebManage.dart';
+import 'package:fyppakam/components/WebSideBar.dart';
 import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
-import '../../components/DekstopSidebar.dart';
 import '../../components/DesktopAppBarIntroWidget.dart';
 import '../../components/DesktopAppbarWidget.dart';
 import '../../components/customContainer.dart';
-
-class Desktopsocialpage extends StatelessWidget {
-  const Desktopsocialpage({super.key});
+class Websocail extends StatelessWidget {
+  const Websocail({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class Desktopsocialpage extends StatelessWidget {
                           )
                       ),
                       child: SingleChildScrollView(
-                        child:   Desktopsidebar(),
+                        child:   Websidebar(),
 
                       ),
                     ),
@@ -79,13 +79,13 @@ class Desktopsocialpage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(
-                                  width:MediaQuery.of(context).size.width*0.4,
-                                   // color: Colors.black,
+                                    width:MediaQuery.of(context).size.width*0.4,
+                                    // color: Colors.black,
 
                                     child: Column(
                                       mainAxisAlignment: MainAxisAlignment.start,
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.center,
+                                      CrossAxisAlignment.center,
                                       children: [
                                         Row(
                                           spacing: 30,
@@ -95,7 +95,7 @@ class Desktopsocialpage extends StatelessWidget {
                                               text: "Total Telegram Channels",
                                               count: "10",
                                               imagePath:
-                                                  "assets/images/telegramIcon.png",
+                                              "assets/images/telegramIcon.png",
                                               isDesktop: true,
                                               height: MediaQuery.of(context).size.height*0.25,
                                               width: MediaQuery.of(context).size.width*0.15,
@@ -105,7 +105,7 @@ class Desktopsocialpage extends StatelessWidget {
                                               text: "Total WhatsApp Group",
                                               count: "5",
                                               imagePath:
-                                                  "assets/images/whatsappIcon.png",
+                                              "assets/images/whatsappIcon.png",
                                               height: MediaQuery.of(context).size.height*0.25,
                                               width: MediaQuery.of(context).size.width*0.15,
                                               isDesktop: true,
@@ -129,8 +129,8 @@ class Desktopsocialpage extends StatelessWidget {
                                                     color: Color(0xFF89E469),
                                                     border: Border.all(width: 1),
                                                     borderRadius:
-                                                        BorderRadius.circular(
-                                                            15)),
+                                                    BorderRadius.circular(
+                                                        15)),
                                                 child: Row(
                                                   children: [
                                                     Icon(Icons.add),
@@ -140,7 +140,7 @@ class Desktopsocialpage extends StatelessWidget {
                                                       style: TextStyle(
                                                           fontSize: 16,
                                                           fontWeight:
-                                                              FontWeight.w500),
+                                                          FontWeight.w500),
                                                     ),
                                                   ],
                                                 ),
@@ -160,8 +160,8 @@ class Desktopsocialpage extends StatelessWidget {
                                                     color: Color(0xFF9DD6EE),
                                                     border: Border.all(width: 1),
                                                     borderRadius:
-                                                        BorderRadius.circular(
-                                                            15)),
+                                                    BorderRadius.circular(
+                                                        15)),
                                                 child: Row(
                                                   children: [
                                                     Icon(Icons.add),
@@ -171,7 +171,7 @@ class Desktopsocialpage extends StatelessWidget {
                                                       style: TextStyle(
                                                           fontSize: 16,
                                                           fontWeight:
-                                                              FontWeight.w500),
+                                                          FontWeight.w500),
                                                     ),
                                                   ],
                                                 ),
@@ -184,7 +184,7 @@ class Desktopsocialpage extends StatelessWidget {
                                         ),
                                         InkWell(
                                           onTap: (){
-                                            Get.to(Desktopmanage());
+                                            Get.to(Webmanage());
                                           },
                                           child: Container(
                                             width: MediaQuery.of(context).size.width*0.3,
@@ -226,3 +226,4 @@ class Desktopsocialpage extends StatelessWidget {
     );
   }
 }
+

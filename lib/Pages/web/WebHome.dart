@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:fyppakam/components/DekstopSidebar.dart';
-import 'package:fyppakam/components/DesktopAppBarIntroWidget.dart';
-import 'package:fyppakam/components/DesktopAppbarWidget.dart';
-import '../../components/customContainer.dart';
+import 'package:fyppakam/components/WebSideBar.dart';
 
-class Desktophome extends StatelessWidget {
-  const Desktophome({super.key});
+import '../../components/DekstopSidebar.dart';
+import '../../components/DesktopAppBarIntroWidget.dart';
+import '../../components/DesktopAppbarWidget.dart';
+import '../../components/customContainer.dart';
+class Webhome extends StatelessWidget {
+  const Webhome({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,7 @@ class Desktophome extends StatelessWidget {
                           )
                       ),
                       child: SingleChildScrollView(
-                        child:   Desktopsidebar(),
+                        child:   Websidebar(),
 
                       ),
                     ),
@@ -140,3 +141,4 @@ class Desktophome extends StatelessWidget {
     );
   }
 }
+

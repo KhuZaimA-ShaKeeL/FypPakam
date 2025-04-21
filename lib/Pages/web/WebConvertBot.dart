@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:fyppakam/components/customDesktopBotTile.dart';
+import 'package:fyppakam/components/WebSideBar.dart';
 
-import '../../components/DekstopSidebar.dart';
 import '../../components/DesktopAppBarIntroWidget.dart';
 import '../../components/DesktopAppbarWidget.dart';
-class Desktopconvertbots extends StatelessWidget {
-  const Desktopconvertbots({super.key});
-
+import '../../components/customDesktopBotTile.dart';
+class Webconvertbot extends StatelessWidget {
+  const Webconvertbot({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +37,7 @@ class Desktopconvertbots extends StatelessWidget {
                           )
                       ),
                       child: SingleChildScrollView(
-                        child:   Desktopsidebar(),
+                        child:   Websidebar(),
 
                       ),
                     ),

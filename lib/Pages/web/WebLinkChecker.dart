@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:fyppakam/Controller/SwitchController.dart';
-import 'package:fyppakam/components/customContainer.dart';
-import 'package:get/get.dart';
 
 import '../../components/CustomButton.dart';
-import '../../components/DekstopSidebar.dart';
 import '../../components/DesktopAppBarIntroWidget.dart';
 import '../../components/DesktopAppbarWidget.dart';
-class Desktoplinkconvert extends StatelessWidget {
-  const Desktoplinkconvert({super.key});
+import '../../components/customContainer.dart';
+class Weblinkchecker extends StatelessWidget {
+  const Weblinkchecker({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final SwitchController controller =Get.put(SwitchController(),tag: "link Checker");
     final linkController=TextEditingController();
     return Scaffold(
       body: Container(
@@ -43,12 +39,13 @@ class Desktoplinkconvert extends StatelessWidget {
                           )
                       ),
                       child: SingleChildScrollView(
-                        child:   Desktopsidebar(),
+                        child:   Weblinkchecker(),
 
                       ),
                     ),
                   ),
                   SizedBox(width: 20), // Space between Sidebar and Content
+
                   // Right Content wrapped in SingleChildScrollView for vertical scrolling
                   Expanded(
                     flex: 8,
@@ -86,7 +83,7 @@ class Desktoplinkconvert extends StatelessWidget {
                                           children: [
                                             customContainer(
                                               color: Color(0xFFB1EEBC),
-                                              text: "Total Links Converted",
+                                              text: "Total use counts",
                                               count: "49",
                                               imagePath: "assets/images/linkIcon.png",
                                               isDesktop: true,
@@ -146,7 +143,7 @@ class Desktoplinkconvert extends StatelessWidget {
                                                       ],
                                                     ),
                                                     SizedBox(height: 3,),
-                                                    Custombutton(label: "Convert", radius: 20, onPressed: (){}),
+                                                    Custombutton(label: "Check", radius: 20, onPressed: (){}),
                                                   ],
                                                 ),
                                               )
@@ -156,28 +153,6 @@ class Desktoplinkconvert extends StatelessWidget {
                                         )
                                       ],
                                     )),
-                                Expanded(
-                                    flex: 4,
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadiusDirectional.circular(10),
-                                        border: Border.all(width: 1),
-                                        color: Color(0xFF96E7A5),
-                                      ),
-                                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
-                                      //color: Color(0xFF96E7A5),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text("Share After Converting",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
-                                          Obx(()=>
-                                              Switch(value: controller.isChecked.value, onChanged:(value) {
-                                                controller.setButton(value);
-                                              },),
-                                          )
-                                        ],
-                                      ),
-                                    ))
                               ],
 
 
@@ -196,3 +171,4 @@ class Desktoplinkconvert extends StatelessWidget {
     );
   }
 }
+

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-class Desktopappbarintrowidget extends StatelessWidget {
-  const Desktopappbarintrowidget({super.key});
+class DesktopandWebappbarintrowidget extends StatelessWidget {
+  const DesktopandWebappbarintrowidget({super.key});
 
   @override
   Widget build(BuildContext context) {

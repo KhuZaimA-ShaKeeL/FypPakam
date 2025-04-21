@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fyppakam/components/pakamText.dart';
-class Desktopappbarwidget extends StatelessWidget {
-  const Desktopappbarwidget({super.key});
+class DesktopandWebappbarwidget extends StatelessWidget {
+  const DesktopandWebappbarwidget({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,19 +1,18 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:fyppakam/components/WebSideBar.dart';
 
 import '../../components/CustomButton.dart';
-import '../../components/DekstopSidebar.dart';
 import '../../components/DesktopAppBarIntroWidget.dart';
 import '../../components/DesktopAppbarWidget.dart';
-
-class Desktopcontactus extends StatefulWidget {
-  const Desktopcontactus({super.key});
+class Webcontactus extends StatefulWidget {
+  const Webcontactus({super.key});
 
   @override
-  State<Desktopcontactus> createState() => _DesktopcontactusState();
+  State<Webcontactus> createState() => _WebcontactusState();
 }
 
-class _DesktopcontactusState extends State<Desktopcontactus> {
+class _WebcontactusState extends State<Webcontactus> {
   PlatformFile? selectedFile;
 
   final TextEditingController nameController = TextEditingController();
@@ -63,7 +62,7 @@ class _DesktopcontactusState extends State<Desktopcontactus> {
                           )
                       ),
                       child: SingleChildScrollView(
-                        child:   Desktopsidebar(),
+                        child:   Websidebar(),
 
                       ),
                     ),
@@ -137,7 +136,7 @@ class _DesktopcontactusState extends State<Desktopcontactus> {
                                     decoration: BoxDecoration(
                                       color: Color(0xFFF5F5F5),
                                       border:
-                                          Border.all(color: Colors.grey.shade300),
+                                      Border.all(color: Colors.grey.shade300),
                                       borderRadius: BorderRadius.circular(10),
                                     ),
                                     child: Column(
@@ -157,14 +156,14 @@ class _DesktopcontactusState extends State<Desktopcontactus> {
                                         InkWell(
                                           onTap: () async {
                                             FilePickerResult? result =
-                                                await FilePicker.platform
-                                                    .pickFiles(
-                                                        type: FileType.custom,
-                                                        allowedExtensions: [
-                                                          'pdf',
-                                                          'mp4'
-                                                        ],
-                                                        allowMultiple: true);
+                                            await FilePicker.platform
+                                                .pickFiles(
+                                                type: FileType.custom,
+                                                allowedExtensions: [
+                                                  'pdf',
+                                                  'mp4'
+                                                ],
+                                                allowMultiple: true);
 
                                             if (result != null) {
                                               setState(() {
@@ -186,12 +185,12 @@ class _DesktopcontactusState extends State<Desktopcontactus> {
                                                 vertical: 10, horizontal: 20),
                                             decoration: BoxDecoration(
                                               borderRadius:
-                                                  BorderRadius.circular(10),
+                                              BorderRadius.circular(10),
                                               border: Border.all(width: 1),
                                             ),
                                             child: Row(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.spaceBetween,
+                                              MainAxisAlignment.spaceBetween,
                                               children: [
                                                 Text(
                                                   selectedFile != null
@@ -200,7 +199,7 @@ class _DesktopcontactusState extends State<Desktopcontactus> {
                                                   style: const TextStyle(
                                                       fontSize: 16,
                                                       fontWeight:
-                                                          FontWeight.bold),
+                                                      FontWeight.bold),
                                                 ),
                                                 const Icon(
                                                     Icons.file_copy_outlined),
@@ -253,7 +252,7 @@ Widget _textField(String hint, {TextEditingController? controller, int maxLines 
         hintText: hint,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
         contentPadding:
-            const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       ),
     ),
   );

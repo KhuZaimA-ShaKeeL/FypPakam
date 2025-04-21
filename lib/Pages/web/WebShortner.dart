@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:fyppakam/components/WebSideBar.dart';
 import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../Controller/SwitchController.dart';
 import '../../components/CustomButton.dart';
-import '../../components/DekstopSidebar.dart';
 import '../../components/DesktopAppBarIntroWidget.dart';
 import '../../components/DesktopAppbarWidget.dart';
 import '../../components/customContainer.dart';
+class Webshortner extends StatelessWidget {
+  const Webshortner({super.key});
 
-class Desktopshortner extends StatelessWidget {
-  const Desktopshortner({super.key});
 
   @override
   Widget build(BuildContext context) {
     final SwitchController controller =
-        Get.put(SwitchController(), tag: "shortner");
+    Get.put(SwitchController(), tag: "shortner");
     final productController = TextEditingController();
     return Scaffold(
       body: Container(
@@ -47,7 +48,7 @@ class Desktopshortner extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(width: 1)),
                       child: SingleChildScrollView(
-                        child: Desktopsidebar(),
+                        child: Websidebar(),
                       ),
                     ),
                   ),
@@ -83,9 +84,9 @@ class Desktopshortner extends StatelessWidget {
                                     flex: 6,
                                     child: Column(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.start,
+                                      MainAxisAlignment.start,
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                      CrossAxisAlignment.start,
                                       children: [
                                         Row(
                                           spacing: 10,
@@ -95,7 +96,7 @@ class Desktopshortner extends StatelessWidget {
                                               text: "Total use counts",
                                               count: "49",
                                               imagePath:
-                                                  "assets/images/linkIcon.png",
+                                              "assets/images/linkIcon.png",
                                               isDesktop: true,
                                               height: MediaQuery.of(context).size.height*0.25,
                                               width: MediaQuery.of(context).size.width*0.15,
@@ -105,7 +106,7 @@ class Desktopshortner extends StatelessWidget {
                                               text: "Remaining Count",
                                               count: "51",
                                               imagePath:
-                                                  "assets/images/shortnerIcon.png",
+                                              "assets/images/shortnerIcon.png",
                                               height: MediaQuery.of(context).size.height*0.25,
                                               width: MediaQuery.of(context).size.width*0.15,
                                               isDesktop: true,
@@ -126,26 +127,26 @@ class Desktopshortner extends StatelessWidget {
                                         ),
                                         SizedBox(
                                           width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
+                                              .size
+                                              .width *
                                               0.4,
                                           child: TextField(
                                             minLines: 7,
                                             maxLines: 10,
                                             keyboardType:
-                                                TextInputType.multiline,
+                                            TextInputType.multiline,
                                             textInputAction:
-                                                TextInputAction.newline,
+                                            TextInputAction.newline,
                                             controller: productController,
                                             decoration: InputDecoration(
                                               border: OutlineInputBorder(
                                                 borderRadius:
-                                                    BorderRadius.circular(10),
+                                                BorderRadius.circular(10),
                                               ),
                                               contentPadding:
-                                                  EdgeInsets.symmetric(
-                                                      vertical: 12,
-                                                      horizontal: 16),
+                                              EdgeInsets.symmetric(
+                                                  vertical: 12,
+                                                  horizontal: 16),
                                             ),
                                           ),
                                         ),
@@ -162,14 +163,14 @@ class Desktopshortner extends StatelessWidget {
                                               ),
                                               SizedBox(
                                                 width: MediaQuery.of(context)
-                                                        .size
-                                                        .width *
+                                                    .size
+                                                    .width *
                                                     0.3,
                                                 child: Column(
                                                   children: [
                                                     Row(
                                                       mainAxisAlignment:
-                                                          MainAxisAlignment.end,
+                                                      MainAxisAlignment.end,
                                                       children: [
                                                         Icon(
                                                           Icons.copy,
@@ -197,8 +198,8 @@ class Desktopshortner extends StatelessWidget {
                                     child: Container(
                                       decoration: BoxDecoration(
                                         borderRadius:
-                                            BorderRadiusDirectional.circular(
-                                                10),
+                                        BorderRadiusDirectional.circular(
+                                            10),
                                         border: Border.all(width: 1),
                                         color: Color(0xFF96E7A5),
                                       ),
@@ -207,7 +208,7 @@ class Desktopshortner extends StatelessWidget {
                                       //color: Color(0xFF96E7A5),
                                       child: Row(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                        MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
                                             "Share After Converting",
@@ -216,7 +217,7 @@ class Desktopshortner extends StatelessWidget {
                                                 fontSize: 24),
                                           ),
                                           Obx(
-                                            () => Switch(
+                                                () => Switch(
                                               value: controller.isChecked.value,
                                               onChanged: (value) {
                                                 controller.setButton(value);

@@ -21,7 +21,7 @@ class Desktopmanage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // AppBar
-            Desktopappbarwidget(),
+            DesktopandWebappbarwidget(),
             SizedBox(height: 20), // Space between AppBar and main content
 
             // Row to split Sidebar and Content
@@ -71,7 +71,7 @@ class Desktopmanage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Desktopappbarintrowidget(),
+                            DesktopandWebappbarintrowidget(),
                             // Intro section for the right content
                             SizedBox(height: 20),
                             // Space between intro and custom containers

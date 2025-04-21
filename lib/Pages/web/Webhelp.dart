@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import '../../components/DekstopSidebar.dart';
+import 'package:fyppakam/components/WebSideBar.dart';
+
 import '../../components/DesktopAppBarIntroWidget.dart';
 import '../../components/DesktopAppbarWidget.dart';
-class Desktophelp extends StatefulWidget {
-  const Desktophelp({super.key});
+class Webhelp extends StatefulWidget {
+  const Webhelp({super.key});
 
   @override
-  State<Desktophelp> createState() => _DesktophelpState();
+  State<Webhelp> createState() => _WebhelpState();
 }
 
-class _DesktophelpState extends State<Desktophelp> {
+class _WebhelpState extends State<Webhelp> {
   final TextEditingController searchController = TextEditingController();
   bool isFaqExpanded = false;
 
@@ -85,7 +86,7 @@ class _DesktophelpState extends State<Desktophelp> {
                           )
                       ),
                       child: SingleChildScrollView(
-                        child:   Desktopsidebar(),
+                        child:   Websidebar(),
 
                       ),
                     ),
@@ -261,3 +262,4 @@ Widget _faqItem(String title) {
     ),
   );
 }
+

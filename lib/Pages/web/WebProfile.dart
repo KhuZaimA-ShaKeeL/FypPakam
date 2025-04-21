@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:fyppakam/components/WebSideBar.dart';
 
-import '../../components/DekstopSidebar.dart';
 import '../../components/DesktopAppBarIntroWidget.dart';
 import '../../components/DesktopAppbarWidget.dart';
-class Desktopprofile extends StatelessWidget {
-  const Desktopprofile({super.key});
+class Webprofile extends StatelessWidget {
+  const Webprofile({super.key});
 
   @override
   Widget build(BuildContext context) {
-   return DefaultTabController(
-     length: 3,
-     child: Scaffold(
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
         body: Container(
           margin: EdgeInsets.symmetric(horizontal: 8),
           child: Column(
@@ -39,7 +39,7 @@ class Desktopprofile extends StatelessWidget {
                             )
                         ),
                         child: SingleChildScrollView(
-                          child:   Desktopsidebar(),
+                          child:   Websidebar(),
 
                         ),
                       ),
@@ -72,8 +72,8 @@ class Desktopprofile extends StatelessWidget {
                                 padding: EdgeInsets.symmetric(horizontal: 10,vertical: 20),
                                 decoration: BoxDecoration(
                                     color: Color(0xFFF5F5F5),
-                                  borderRadius: BorderRadiusDirectional.circular(10),
-                                  border: Border.all(width: 1)
+                                    borderRadius: BorderRadiusDirectional.circular(10),
+                                    border: Border.all(width: 1)
 
                                 ),
                                 child: Row(
@@ -98,7 +98,7 @@ class Desktopprofile extends StatelessWidget {
                                     ),
                                     SizedBox(width: 50,),
                                     // Right side (edit icon)
-                                   IconButton(onPressed: (){}, icon: Icon(Icons.edit, size: 40),)
+                                    IconButton(onPressed: (){}, icon: Icon(Icons.edit, size: 40),)
                                   ],
                                 ),
                               ),
@@ -187,7 +187,7 @@ class Desktopprofile extends StatelessWidget {
                                             SizedBox(height: 20),
 
                                             _personalDetailsAffiliator("assets/images/bataImage.png", 'gh09321', 'Bata',context),
-                                           _personalDetailsAffiliator("assets/images/sapphireImage.png", 'gf00981', 'Sapphire',context),
+                                            _personalDetailsAffiliator("assets/images/sapphireImage.png", 'gf00981', 'Sapphire',context),
                                             _personalDetailsAffiliator("assets/images/outfittersImage.png", 'gf09821', 'Outfitters',context),
                                             _personalDetailsAffiliator("assets/images/darazImage.png", 'gh09832', 'Daraz',context),
                                             _personalDetailsAffiliator("assets/images/amazoneImage.png", 'gh67676', 'Amazon',context),
@@ -212,7 +212,7 @@ class Desktopprofile extends StatelessWidget {
           ),
         ),
       ),
-   );
+    );
   }
 }
 
@@ -250,7 +250,7 @@ Widget _personalDetailsAffiliator(String ImagePath, String subtitle, String titl
           height: 50,
           width: 50,
           decoration: BoxDecoration(
-           // color: Colors.white, // Set white background
+            // color: Colors.white, // Set white background
             borderRadius: BorderRadius.circular(8), // Optional: rounded corners
           ),
           padding: EdgeInsets.all(4), // Optional: for spacing inside the box

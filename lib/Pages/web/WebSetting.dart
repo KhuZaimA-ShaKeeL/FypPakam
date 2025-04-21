@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:fyppakam/components/WebSideBar.dart';
 import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+
 import '../../Controller/SwitchControllers.dart';
-import '../../components/DekstopSidebar.dart';
 import '../../components/DesktopAppBarIntroWidget.dart';
 import '../../components/DesktopAppbarWidget.dart';
-
-class Desktopsetting extends StatefulWidget {
-  const Desktopsetting({super.key});
+class Websetting extends StatefulWidget {
+  const Websetting({super.key});
 
   @override
-  State<Desktopsetting> createState() => _DesktopsettingState();
+  State<Websetting> createState() => _WebsettingState();
 }
 
-class _DesktopsettingState extends State<Desktopsetting> {
+class _WebsettingState extends State<Websetting> {
+
   final SwitchControllers switchController1 =
   Get.put(SwitchControllers(), tag: "Setting1");
   final SwitchControllers switchController2 =
@@ -138,7 +141,7 @@ class _DesktopsettingState extends State<Desktopsetting> {
                         border: Border.all(width: 1),
                       ),
                       child: SingleChildScrollView(
-                        child: Desktopsidebar(),
+                        child: Websidebar(),
                       ),
                     ),
                   ),

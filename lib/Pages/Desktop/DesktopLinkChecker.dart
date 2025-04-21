@@ -18,7 +18,7 @@ class Desktoplinkchecker extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // AppBar
-            Desktopappbarwidget(),
+            DesktopandWebappbarwidget(),
             SizedBox(height: 20), // Space between AppBar and main content
 
             // Row to split Sidebar and Content
@@ -66,7 +66,7 @@ class Desktoplinkchecker extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Desktopappbarintrowidget(), // Intro section for the right content
+                            DesktopandWebappbarintrowidget(), // Intro section for the right content
                             SizedBox(height: 20), // Space between intro and custom containers
                             Row(
                               spacing: 5,
