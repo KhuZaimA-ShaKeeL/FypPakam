@@ -219,7 +219,9 @@ class WebLayot extends StatelessWidget {
                         Expanded(
                           child: Center(
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.to(Websignuppage());
+                              },
                               child: Text("Join now"),
                               style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.green,
